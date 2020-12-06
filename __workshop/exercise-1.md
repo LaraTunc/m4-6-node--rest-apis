@@ -1,4 +1,4 @@
-# Cafe API Architecture Doc
+ # Cafe API Architecture Doc
 
 ## Details
 
@@ -17,3 +17,13 @@ Write out each endpoint, its method, and brief description of waht it should do.
 _This activity is more about the discussion in how to best organize data endpoints. There will not be any coding._
 
 ## Your Answer
+
+/customers | GET | All clients of the cafe. This data set might have information such as name, last name, frequency of coming to the cafe, preferred seating spot, etc. 
+/seats | GET | All available seats at the cafe
+/products | GET | Details about the products such as stock, description, nutrition value, dietary restrictions, etc 
+/customers/:id | GET | individual customer 
+/customers | POST | when a new customers comes to the cafe, this will create a new data point for the customer. 
+/seats/:id | GET | individual seats available at the cafe 
+/seats | PATCH | This will update the seats as available or non-available as they fill up 
+/stock/:id | GET | This will provide the available stock of a specific item (such as croissants)
+/order | POST | This will collect all order data. It will associate the order to customers and will amend the stock accordingly with each order.
